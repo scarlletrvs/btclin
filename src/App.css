@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body{
+  font-family:  'PT Sans', sans-serif; 
+}
+
+h1{
+  font-size: 35px;
+  color: rgb(12, 12, 128);
+  padding-left: 3%;
+}
+
+h2{
+  font-family: 'PT Sans', sans-serif; 
+  color:black;
+  font-size: 18px;
+  padding-left: 2%;
+    align-self: end;
+    margin: 0;
+    
+
+}
+
+hr{
+  height: 7px;
+  background-color:rgb(12, 12, 128);
+  border-right: 50%;
+  border-left: 50%;
+}
+
+label{
+  font-family: 'PT Sans', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 17px;
+
+ }
+ input{
+  all: unset;
+  border: 1px rgb(12, 12, 128) solid;
+  font-family: 'PT Sans', sans-serif; 
+   border-radius: 20px;
+   padding: 5px;
+   height: 20px;
+   width: 90%;
+   
+
+
+ }
+ select{
+  border: 1px rgb(12, 12, 128) solid;
+  font-family: 'PT Sans', sans-serif; 
+   border-radius: 20px;
+   padding: 5px;
+   height: 29px;
+   width: 140px;
+ font-size: 14px;
+ }
+
+
+button{
+ all:unset;
+ width: 120px;
+ height: 30px;
+ background-color:rgb(12, 12, 128) ;
+ color:white;
+ font-family:'PT Sans', sans-serif;  
+ border-radius: 30px;
+ text-align: center;
+ margin-top: 10px;
+}
+
+p{
+  font-family: 'PT Sans', sans-serif; 
+ }
+ #option{
+  display:flex;
+
+ justify-content: space-between;
+
+ }
+
+ 
+form{
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 3%;
+
+}
+.label{
+  margin:0;
+}
