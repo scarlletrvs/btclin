@@ -54,7 +54,7 @@ function App(){
          onChange={ (e) => setNome(e.target.value) }
         /><br/>
         </div>
-        <div class="label">
+        <div className="label">
          <label>Número carteira:</label><br/>
         <input 
          placeholder="Digite o número carteira" 
