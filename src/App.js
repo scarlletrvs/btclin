@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+
 import { useState } from 'react';
+import axios from 'axios';
 
 
 
@@ -20,16 +22,16 @@ function App(){
   function handleRegister(e){
   e.preventDefault();
   
-  const dados = {
-     nome:nome,
-     carteira:carteira,
-     cpf:cpf,
-     especialidade:especialidade,
-     dia:dia,
-     horario:horario
-  }
-  console.log(dados)
-
+  axios.post("http://localhost:3000/create",{
+    nome:nome,
+    numerocarteira:carteira,
+    cpf:cpf,
+    especialidademedica:especialidade,
+    data:dia,
+    hora:horario
+  }).then((dados)=>{
+   console.log(dados.status)
+  })
 
   }
 
@@ -43,7 +45,7 @@ function App(){
 
       <form onSubmit={handleRegister}>
 
-        <div class="label">
+        <div className="label">
         
         <label>Nome:</label><br/>
         <input 
@@ -60,7 +62,7 @@ function App(){
          onChange={ (e) => setCarteira(e.target.value) }
         /><br/>
   </div>
-  <div class="label">
+  <div className="label">
         <label>cpf:</label><br/>
         <input 
          placeholder="Digite seu cpf" 
@@ -68,7 +70,7 @@ function App(){
          onChange={ (e) => setCpf(e.target.value) }
         /><br/>  </div>
 
-<div class="label">
+<div className="label">
         <label id="option">especialidade Médica: </label><br/>
         <select 
           value={especialidade}
@@ -84,7 +86,7 @@ function App(){
         <br/> </div>
       
 
-     <div class="label">
+     <div className="label">
         <label>Data:</label><br/>
         <input 
          type="date"
@@ -94,7 +96,7 @@ function App(){
         </div>
 
 
-      <div class="label">
+      <div className="label">
          <label>Horário:</label><br/>
           <select value={horario}
          onChange={ (e) => setHorario(e.target.value) } >
